@@ -73,34 +73,35 @@ const MenuShowcase = () => {
 
         {/* Menu Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {menuItems.map((item) => (
-            <Card key={item.id} className="bg-card border-border/50 hover:shadow-card transition-all duration-300 hover:scale-105 overflow-hidden">
-              <div className="relative">
-                <img 
-                  src={item.image} 
-                  alt={item.name}
-                  className="w-full h-48 object-cover"
-                />
-                {/* Decorative elements overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5"></div>
-              </div>
-              
-              <CardContent className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-foreground">
-                    {item.name}
-                  </h3>
-                  <span className="text-xl font-bold text-primary">
-                    {item.price}
-                  </span>
+            {menuItems.map((item) => (
+              <Card key={item.id} className="bg-card border-border/50 hover:shadow-card transition-all duration-300 hover:scale-105 overflow-hidden cursor-pointer"
+                onClick={() => window.location.href = `/product/${item.id}`}>
+                <div className="relative">
+                  <img 
+                    src={item.image} 
+                    alt={item.name}
+                    className="w-full h-48 object-cover"
+                  />
+                  {/* Decorative elements overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5"></div>
                 </div>
                 
-                <Button variant="default" size="sm" className="w-full">
-                  {item.badge}
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+                <CardContent className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {item.name}
+                    </h3>
+                    <span className="text-xl font-bold text-primary">
+                      {item.price}
+                    </span>
+                  </div>
+                  
+                  <Button variant="default" size="sm" className="w-full">
+                    {item.badge}
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
         </div>
 
         {/* See Menu Button */}

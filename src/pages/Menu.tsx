@@ -170,9 +170,23 @@ const Menu = () => {
                       </span>
                     </div>
                     
-                    <Button variant="default" size="sm" className="w-full">
-                      Order Now
-                    </Button>
+                    <div className="flex gap-2">
+                      <Button 
+                        variant="default" 
+                        size="sm" 
+                        className="flex-1"
+                        onClick={() => window.location.href = `/product/${item.id}`}
+                      >
+                        Order Now
+                      </Button>
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        onClick={() => window.location.href = `/product/${item.id}`}
+                      >
+                        View
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               ))}
