@@ -57,6 +57,21 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        /* Custom Mediterranean Colors */
+        "warm-cream": "hsl(var(--warm-cream))",
+        "olive-green": "hsl(var(--olive-green))", 
+        "mediterranean-blue": "hsl(var(--mediterranean-blue))",
+        "golden-yellow": "hsl(var(--golden-yellow))",
+        "terracotta": "hsl(var(--terracotta))",
+      },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-card": "var(--gradient-card)", 
+        "gradient-primary": "var(--gradient-primary)",
+      },
+      boxShadow: {
+        card: "var(--shadow-card)",
+        button: "var(--shadow-button)",
       },
       borderRadius: {
         lg: "var(--radius)",
